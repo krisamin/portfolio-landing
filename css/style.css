@@ -1,0 +1,147 @@
+@import url(https://fonts.2w.vc/wanted-sans/static/font.css);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Wanted Sans', sans-serif;
+  overflow: hidden;
+
+  background-color: white;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  line-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+#profile {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+
+  width: 600px;
+  height: 600px;
+  background-image: url(../icon/profile.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+@keyframes backgroundIn {
+  from {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  to {
+    background-color: rgba(255, 255, 255, .8);
+  }
+}
+
+#center {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(255, 255, 255, .8);
+
+  align-items: center;
+  justify-content: center;
+
+  animation: backgroundIn 2s cubic-bezier(0.5, 0, 0, 1);
+}
+
+@keyframes windowIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+#window  {
+  flex: 1;
+  width: 100%;
+  max-height: 300px;
+  max-width: 600px;
+
+  animation: windowIn 2s cubic-bezier(0.5, 0, 0, 1);
+}
+
+#window #inner {
+  flex: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+#name {
+  gap: 8px;
+  align-items: flex-end;
+}
+
+#name > p {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#name > p:last-child {
+  opacity: .5;
+}
+
+#links {
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+#links #link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+#icons {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+#icons #icon {
+  width: 20px;
+  height: 20px;
+
+  background-size: contain;
+  background-position: center center;
+}
+
+#icons #icon.github {
+  background-image: url(../icon/github.svg);
+}
+
+#icons #icon.instagram {
+  background-image: url(../icon/instagram.svg);
+}
+
+#icons #icon.email {
+  background-image: url(../icon/email.svg);
+}
