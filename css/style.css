@@ -138,6 +138,10 @@ a {
   background-image: url(../icon/github.svg);
 }
 
+#icons #icon.readcv {
+  background-image: url(../icon/readcv.svg);
+}
+
 #icons #icon.instagram {
   background-image: url(../icon/instagram.svg);
 }
