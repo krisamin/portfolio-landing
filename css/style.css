@@ -146,6 +146,10 @@ a {
   background-image: url(../icon/instagram.svg);
 }
 
+#icons #icon.matrix {
+  background-image: url(../icon/hand.svg);
+}
+
 #icons #icon.email {
   background-image: url(../icon/email.svg);
 }
